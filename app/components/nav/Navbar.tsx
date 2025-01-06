@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 import NavBarLinks from "./NavBarLinks";
 import Burger from "./Burger";
+import { Authenticator } from "@aws-amplify/ui-react";
 
 const Navbar = () => {
   const router = useRouter();
@@ -22,8 +23,10 @@ const Navbar = () => {
         onClick={() => router.push("/")}
         priority
       />
-      <NavBarLinks />
-      <Burger />
+      <Authenticator.Provider>
+        <NavBarLinks />
+        <Burger />
+      </Authenticator.Provider>
     </nav>
   );
 };
