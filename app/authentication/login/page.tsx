@@ -1,21 +1,29 @@
 "use client";
 
-import { Authenticator } from "@aws-amplify/ui-react";
-import { Amplify } from "aws-amplify";
-import "@aws-amplify/ui-react/styles.css";
-import outputs from "../../../amplify_outputs.json";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-Amplify.configure(outputs);
+import { Authenticator, useAuthenticator } from "@aws-amplify/ui-react";
+
+import "@aws-amplify/ui-react/styles.css";
+
+function CustomAuthenticator() {
+  const { user } = useAuthenticator((context) => [context.user]);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user) router.push("/");
+  }, [user, router]);
+
+  return (
+    <div className="flex flex-1 justify-center">
+      {" "}
+      <Authenticator />{" "}
+    </div>
+  );
+}
 
 export default function Login() {
-  return (
-    <Authenticator>
-      {({ signOut, user }) => (
-        <main>
-          <h1>Hello {user?.username}</h1>
-          <button onClick={signOut}>Sign out</button>
-        </main>
-      )}
-    </Authenticator>
-  );
+  return <CustomAuthenticator />;
 }
