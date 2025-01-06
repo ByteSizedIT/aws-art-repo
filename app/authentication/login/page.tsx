@@ -25,9 +25,5 @@ function CustomAuthenticator() {
 }
 
 export default function Login() {
-  return (
-    <Authenticator.Provider>
-      <CustomAuthenticator />
-    </Authenticator.Provider>
-  );
+  return <CustomAuthenticator />;
 }

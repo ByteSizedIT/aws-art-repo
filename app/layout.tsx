@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 
-import ConfigureAmplifyClientSide from "../app/components/amplify/ConfigureAmplify";
+import AuthProvider from "./components/auth/AuthProvider";
 
 import Navbar from "./components/nav/Navbar";
 
@@ -33,9 +33,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <ConfigureAmplifyClientSide />
-        <Navbar />
-        {children}
+        <AuthProvider>
+          <Navbar />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
