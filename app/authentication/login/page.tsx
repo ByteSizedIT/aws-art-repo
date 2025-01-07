@@ -7,7 +7,7 @@ import { Authenticator, useAuthenticator } from "@aws-amplify/ui-react";
 
 import "@aws-amplify/ui-react/styles.css";
 
-function CustomAuthenticator() {
+export default function Login() {
   const { user } = useAuthenticator((context) => [context.user]);
 
   const router = useRouter();
@@ -18,12 +18,7 @@ function CustomAuthenticator() {
 
   return (
     <div className="flex flex-1 justify-center">
-      {" "}
-      <Authenticator />{" "}
+      <Authenticator className="flex flex-1 justify-center" />
     </div>
   );
-}
-
-export default function Login() {
-  return <CustomAuthenticator />;
 }

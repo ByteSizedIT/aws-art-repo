@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --amplify-colors-blue-20: #c426cf; /* Overiding Amplify with our custom color */
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -22,4 +24,52 @@ body {
 
 h1 {
   @apply text-center text-lg sm:text-xl md:text-xl font-bold my-6;
+}
+
+.amplify-tabs__item {
+  color: #6b7280 !important;
+}
+
+.amplify-tabs__item:hover {
+  color: black !important;
+}
+
+.amplify-tabs__item--active {
+  color: black !important;
+  border-color: #c426cf !important;
+}
+
+.amplify-tabs__item--active {
+  color: black !important;
+}
+
+.amplify-button:hover {
+  background-color: #c426cf !important;
+  color: #ffffff;
+}
+
+.amplify-button--primary {
+  background-color: #6b7280 !important;
+}
+
+.amplify-button--primary:hover {
+  background-color: #c426cf !important;
+}
+
+.amplify-button--small {
+  color: #c426cf !important;
+}
+
+.amplify-button--small:hover {
+  background-color: #c426cf !important;
+  color: #ffffff !important;
+}
+
+.amplify-field__show-password:hover {
+  background-color: #eca7fe;
+  border-color: black;
+}
+
+.amplify-field__show-password:focus {
+  background-color: #eca7fe;
 }
