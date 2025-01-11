@@ -10,5 +10,5 @@ export const auth = defineAuth({
       verificationEmailSubject: "Welcome 👋 Verify your email!",
     },
   },
-  groups: ["admin"],
+  groups: ["ADMIN"],
 });
