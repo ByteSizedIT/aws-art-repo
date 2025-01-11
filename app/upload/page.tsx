@@ -9,7 +9,7 @@ const Upload = () => {
       Upload Page placeholder
       <FileUploader
         acceptedFileTypes={["image/*"]}
-        path="public/"
+        path="artUploads/"
         maxFileCount={1}
         isResumable
       />
