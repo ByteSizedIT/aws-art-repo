@@ -5,8 +5,7 @@ import "@aws-amplify/ui-react/styles.css";
 
 const Upload = () => {
   return (
-    <div>
-      Upload Page placeholder
+    <div className="w-4/5 mt-4 mx-auto">
       <FileUploader
         acceptedFileTypes={["image/*"]}
         path="artUploads/"

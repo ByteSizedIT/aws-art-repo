@@ -73,3 +73,11 @@ h1 {
 .amplify-field__show-password:focus {
   background-color: #eca7fe;
 }
+
+.amplify-loader line:last-of-type {
+  stroke: #c426cf !important;
+}
+
+.amplify-fileuploader__file__status--success {
+  color: #c426cf !important;
+}
