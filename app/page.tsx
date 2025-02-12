@@ -65,21 +65,22 @@ export default async function Home() {
   // console.log({ files });
 
   return (
-    <div>
-      <h1>All Files</h1>
-      {files.map(
-        (file, index) =>
-          file && (
-            <div key={index}>
-              <Image
-                src={file.base64Url}
-                alt={file.key ?? ""}
-                width={300}
-                height={300}
-              />
-            </div>
-          )
-      )}
-    </div>
+    <main className="max-w-7xl flex flex-col mx-auto p-10">
+      <div className="w-full sm:columns-2 xl:columns-4 gap-0">
+        {files.map(
+          (file, index) =>
+            file && (
+              <div key={index}>
+                <Image
+                  src={file.base64Url}
+                  alt={file.key ?? ""}
+                  width={300}
+                  height={300}
+                />
+              </div>
+            )
+        )}
+      </div>
+    </main>
   );
 }
