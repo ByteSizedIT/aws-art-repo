@@ -2,6 +2,7 @@
 
 import { FileUploader } from "@aws-amplify/ui-react-storage";
 import "@aws-amplify/ui-react/styles.css";
+import UploadForm from "../components/upload/UploadForm";
 
 const Upload = () => {
   return (
@@ -12,6 +13,11 @@ const Upload = () => {
         maxFileCount={1}
         isResumable
       />
+
+      <div className="w-full flex-grow flex flex-col justify-center items-center text-center mx-auto p-5">
+        <h1>UPLOAD NEW ARTWORK</h1>
+        <UploadForm />
+      </div>
     </div>
   );
 };
