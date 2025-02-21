@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const ArtWorkName = () => {
+const ArtWorkNameField = () => {
   const [artworkName, setArtworkName] = useState("");
   return (
     <label
@@ -23,4 +23,4 @@ const ArtWorkName = () => {
     </label>
   );
 };
-export default ArtWorkName;
+export default ArtWorkNameField;

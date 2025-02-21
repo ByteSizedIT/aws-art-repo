@@ -1,4 +1,6 @@
 import ArtworkNameField from "./ArtworkNameField";
+import ArtworkDescriptionField from "./ArtworkDescriptionField";
+import ArtworkImageField from "./ArtworkImageField";
 
 const UploadForm = () => {
   function handleSubmit(e: React.FormEvent) {
@@ -11,6 +13,14 @@ const UploadForm = () => {
       onSubmit={handleSubmit}
     >
       <ArtworkNameField />
+      <ArtworkDescriptionField />
+      <ArtworkImageField />
+      <button
+        type="submit"
+        className="w-1/2 mx-auto text-sm sm:text-base md:text-lg"
+      >
+        Submit
+      </button>
     </form>
   );
 };
