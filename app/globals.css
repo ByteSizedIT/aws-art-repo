@@ -6,6 +6,11 @@
   --background: #ffffff;
   --foreground: #171717;
 
+  /* Amplify examples */
+  /* --amplify-colors-font-primary: #333;*/
+  /* you can also use references: */
+  /* --amplify-colors-font-secondary: var(--amplify-colors-neutral-60); */
+
   --amplify-colors-blue-20: #c426cf; /* Overiding Amplify with our custom color */
 }
 
@@ -43,21 +48,22 @@ h1 {
   color: black !important;
 }
 
+.amplify-button {
+  color: #c426cf !important;
+}
+
 .amplify-button:hover {
   background-color: #c426cf !important;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .amplify-button--primary {
   background-color: #6b7280 !important;
+  color: #ffffff !important;
 }
 
 .amplify-button--primary:hover {
   background-color: #c426cf !important;
-}
-
-.amplify-button--small {
-  color: #c426cf !important;
 }
 
 .amplify-button--small:hover {

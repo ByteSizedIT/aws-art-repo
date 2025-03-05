@@ -21,16 +21,15 @@ const ArtworkImageField = () => {
   }
 
   return (
-    <label className="flex flex-col sm:flex-row items-center py-2">
-      <span className="text-sm sm:text-base md:text-lg pb-2 sm:pb-0">
-        Artwork:
-      </span>
+    <label htmlFor="file" className="amplify-label">
+      Artwork:
       <input
         required
         type="file"
         ref={fileUploadRef}
         accept=".png, .jpeg, .webp"
-        className="w-full text-sm sm:text-base md:text-lg bg-transparent border-solid border-2 rounded-lg  focus:outline-gray-500 ml-2 px-2 py-1 flex-1"
+        className="amplify-input"
+        id="file"
         onChange={handleChange}
       />
     </label>
